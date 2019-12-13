@@ -15,7 +15,7 @@ import (
 //    ResponseStatus: 500 (http.StatusInternalServerError)
 //    StackSize:     MinimumStackSize (4KB)
 //    Logger:        standard log
-//    ErrHandler:    the stack traces are output to the log and not to the HTTP response.
+//    ErrorHandler:    the stack traces are output to the log and not to the HTTP response.
 func Recover(options ...Option) func(http.Handler) http.Handler {
 	c := NewConfig()
 	for _, v := range options {
